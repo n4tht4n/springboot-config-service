@@ -1,0 +1,23 @@
+server:
+  # server configuration, as done before. need another port...
+  port: 8888
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
+
+spring:
+  # this is new stuff, configuring spring itself
+  application:
+    name: config-service
+  cloud:
+    # here the cloud config server is configured
+    config:
+      server:
+        git:
+          # and here we configure the Git repo
+          uri: https://github.com/n4tht4n/springboot-config-repo
+          default-label: main
+          # to enable usage of private repos, further credentials config needed!

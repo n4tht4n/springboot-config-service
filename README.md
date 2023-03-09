@@ -21,12 +21,13 @@ skeleton.
 ./gradlew bootRun
 
 # to run the built JAR artifact manually:
-java -jar build/libs/catalog-service-0.0.1-SNAPSHOT.jar
+java -jar build/libs/config-service-0.0.1-SNAPSHOT.jar
 
-# to post some data
-http POST :9001/books author="Lyra Silverstar" title="" isbn="1234567891" price=9.90
-# to get all books
-http :9001/books
+# to retrieve config data
+http :8888/catalog-service/default
+http :8888/catalog-service/prod
+http :8888/catalog-service.yml
+http :8888/catalog-service-prod.yml
 ```
 
 ## Containerizing

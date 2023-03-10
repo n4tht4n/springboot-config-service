@@ -2,6 +2,8 @@
 
 A Spring Boot applicationg running as a Spring Cloud Config Server, providing configuration data to other services.
 
+Most things are done out of the box, and a bit of configuration. It's a lean service...
+
 ## Setup
 
 The original setup was done using [spring initializr](https://start.spring.io). This generated an already running
